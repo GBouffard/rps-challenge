@@ -11,6 +11,7 @@ describe Player do
     expect(player.hand).to eq 'rock'
   end
 
-  xit 'cannot choose a hand that is not a RPSSL hand' do
+  it 'cannot choose a hand that is not a RPSSL hand' do
+    expect { player.choice('peanuts') }.to raise_error 'This is not a RPSSL hand!'
   end
 end
