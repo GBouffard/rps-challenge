@@ -6,7 +6,9 @@ describe Game do
     expect(game.type).to eq 'RPS'
   end
 
-  xit 'knows that we can choose to play RPSSL instead of RPS' do
+  it 'knows that we can choose to play RPSSL instead of RPS' do
+    rpssl_game = Game.new('player1', 'RPSSL')
+    expect(rpssl_game.type).to eq 'RPSSL'
   end
 
   xit 'cannot play any other type of game than RPS or RPSSL' do
