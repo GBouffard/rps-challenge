@@ -2,6 +2,7 @@ require 'game'
 
 describe Game do
   let(:player1) { double :player }
+  let(:player2) { double :player }
   let(:game) { Game.new(:player1) }
   it 'knows that we are playing RPS if not mentioned otherwise' do
     expect(game.type).to eq 'RPS'
@@ -17,7 +18,6 @@ describe Game do
   end
 
   it 'can be played by 1 but also by 2 players' do
-    player2 = double(:player)
     expect { Game.new(:player1, 'RPS', player2) }.not_to raise_error
   end
 
@@ -29,7 +29,9 @@ describe Game do
     expect(game.cpu_hand).to satisfy { 'rock' || 'paper' || 'scissors' }
   end
 
-  xit 'does not choose a hand if there is a second player in the game' do
+  it 'does not choose a hand if there is a second player in the game' do
+    two_players_game = Game.new(:player1, 'RPS', player2)
+    expect(two_players_game.cpu_hand).to be nil
   end
 
   xit 'knows who the winner of a game is' do
