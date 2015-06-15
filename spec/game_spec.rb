@@ -1,7 +1,15 @@
 require 'game'
 
 describe Game do
-  xit 'knows if we are playing RPS or RPSSL' do
+  game = Game.new('player1')
+  it 'knows that we are playing RPS if not mentioned otherwise' do
+    expect(game.type).to eq 'RPS'
+  end
+
+  xit 'knows that we can choose to play RPSSL instead of RPS' do
+  end
+
+  xit 'cannot play any other type of game than RPS or RPSSL' do
   end
 
   xit 'can be played by 1 or 2 players' do
