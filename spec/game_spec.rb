@@ -25,7 +25,11 @@ describe Game do
     expect(game.player2).to eq 'CPU'
   end
 
-  xit 'chooses a random hand if there is only one player online' do
+  it 'chooses a random hand if there is only one player online' do
+    expect(game.cpu_hand).to satisfy { 'rock' || 'paper' || 'scissors' }
+  end
+
+  xit 'does not choose a hand if there is a second player in the game' do
   end
 
   xit 'knows who the winner of a game is' do
