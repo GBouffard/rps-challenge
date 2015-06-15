@@ -1,6 +1,6 @@
 class Game
   attr_reader :type
-  def initialize(_player1, type = 'RPS')
+  def initialize(_player1, type = 'RPS', player2 = 'CPU')
   	@type = type
   	game_type_ok?
   end

@@ -15,10 +15,8 @@ describe Game do
     expect { Game.new('p1', 'battleships') }.to raise_error 'You can only play a RPS type game'
   end
 
-  xit 'can be played by 1 or 2 players' do
-  end
-
-  xit 'cannot be player by more than 2 players' do
+  it 'can be played by 1 but also by 2 players' do
+    expect { Game.new('p1', 'RPS', 'player2') }.not_to raise_error
   end
 
   xit 'knows that if there is only one player online, the 2nd player is the CPU' do
