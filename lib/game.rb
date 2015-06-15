@@ -1,6 +1,12 @@
 class Game
   attr_reader :type
   def initialize(_player1, type = 'RPS')
-    @type = type
+  	@type = type
+  	game_type_ok?
+  end
+
+private
+  def game_type_ok?
+    fail 'You can only play a RPS type game' unless (@type == 'RPS' || @type =='RPSSL')
   end
 end

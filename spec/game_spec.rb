@@ -11,7 +11,8 @@ describe Game do
     expect(rpssl_game.type).to eq 'RPSSL'
   end
 
-  xit 'cannot play any other type of game than RPS or RPSSL' do
+  it 'cannot play any other type of game than RPS or RPSSL' do
+    expect { Game.new('p1', 'battleships') }.to raise_error 'You can only play a RPS type game'
   end
 
   xit 'can be played by 1 or 2 players' do
