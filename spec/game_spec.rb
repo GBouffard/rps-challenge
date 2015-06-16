@@ -2,7 +2,7 @@ require 'game'
 
 describe Game do
   let(:player1) { double :player, hand: 'rock' }
-  let(:player2) { double :player, hand: 'paper' }
+  let(:player2) { double :player, hand: 'scissors' }
   let(:game) { Game.new(:player1) }
   let(:two_players_game) { Game.new(:player1, 'RPS', player2) }
 
@@ -42,9 +42,29 @@ describe Game do
     expect(draw_game.winner).to eq 'DRAW!'
   end
 
-  xit 'knows who the winner of a RPS game is' do
+  it 'knows who the winner of a 2 players RPS game is' do
+    two_players_game.decision(player1, player2)
+    expect(two_players_game.winner).to eq player1
+    player3 = double(:player, hand: 'paper')
+    p3wins = Game.new(:player1, 'RPS', player3)
+    p3wins.decision(player1, player3)
+    expect(p3wins.winner).to eq player3
   end
 
-  xit 'knows who the winner of a RPSSL game is' do
+  it 'knows who the winner of a 2 players RPSSL game is' do
+    player4 = double(:player, hand: 'lizard')
+    p1wins = Game.new(:player1, 'RPS', player4)
+    p1wins.decision(player1, player4)
+    expect(p1wins.winner).to eq player1
+    player5 = double(:player, hand: 'spock')
+    p5wins = Game.new(:player1, 'RPS', player5)
+    p5wins.decision(player1, player5)
+    expect(p5wins.winner).to eq player5
+  end
+
+  xit 'knows who the winner 1 player vs CPU RPS game is' do
+  end
+
+  xit 'knows who the winner 1 player vs CPU RPSSL game is' do
   end
 end

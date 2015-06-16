@@ -1,6 +1,10 @@
 class Game
   attr_reader :type, :player2, :cpu_hand, :winner
-  RPS_RULES = { 'rock' => 'scissors', 'scissors' => 'paper', 'paper' => 'rock' }
+  RPS_RULES = { 'rock' => %w(scissors lizard),
+                'scissors' => %w(paper lizard),
+                'paper' => %w(rock spock),
+                'lizard' => %w(paper spock),
+                'spock' => %w(rock scissors) }
 
   def initialize(player1, type = 'RPS', player2 = 'CPU')
     @type = type
@@ -11,7 +15,8 @@ class Game
   end
 
   def decision(player1, player2)
-    @winner = 'DRAW!' if player1.hand == player2.hand
+    @winner = (player1.hand == player2.hand ? 'DRAW!' : player2)
+    RPS_RULES.each { |wins, loses| @winner = player1 if player1.hand == wins && loses.include?(player2.hand) }
   end
 
   private
