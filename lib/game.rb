@@ -14,9 +14,10 @@ class Game
     @cpu_hand = cpu_plays if @player2 == 'CPU'
   end
 
-  def decision(player1, player2)
-    @winner = (player1.hand == player2.hand ? 'DRAW!' : player2)
-    RPS_RULES.each { |wins, loses| @winner = player1 if player1.hand == wins && loses.include?(player2.hand) }
+  def decision(player1, player2 = 'CPU')
+    second_hand = (@player2 == 'CPU' ? @cpu_hand : @player2.hand)
+    @winner = (player1.hand == second_hand ? 'DRAW!' : player2)
+    RPS_RULES.each { |wins, loses| @winner = player1 if player1.hand == wins && loses.include?(second_hand) }
   end
 
   private

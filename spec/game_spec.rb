@@ -62,9 +62,14 @@ describe Game do
     expect(p5wins.winner).to eq player5
   end
 
-  xit 'knows who the winner 1 player vs CPU RPS game is' do
+  it 'knows who the winner of a 1 player vs CPU RPS game is' do
+    100.times do
+      new_game = Game.new(:player1)
+      new_game.decision(player1)
+      expect(new_game.winner).to satisfy { player1 || 'DRAW!' || 'CPU' }
+    end
   end
 
-  xit 'knows who the winner 1 player vs CPU RPSSL game is' do
+  xit 'knows who the winner of a 1 player vs CPU RPSSL game is' do
   end
 end
