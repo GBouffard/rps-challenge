@@ -1,9 +1,11 @@
 require 'game'
 
 describe Game do
-  let(:player1) { double :player }
-  let(:player2) { double :player }
+  let(:player1) { double :player, hand: 'rock' }
+  let(:player2) { double :player, hand: 'paper' }
   let(:game) { Game.new(:player1) }
+  let(:two_players_game) { Game.new(:player1, 'RPS', player2) }
+
   it 'knows that we are playing RPS if not mentioned otherwise' do
     expect(game.type).to eq 'RPS'
   end
@@ -30,13 +32,19 @@ describe Game do
   end
 
   it 'does not choose a hand if there is a second player in the game' do
-    two_players_game = Game.new(:player1, 'RPS', player2)
     expect(two_players_game.cpu_hand).to be nil
   end
 
-  xit 'knows who the winner of a game is' do
+  it 'knows when it\'s a draw' do
+    player_draw = double(:player, hand: 'rock')
+    draw_game = Game.new(:player1, 'RPS', player_draw)
+    draw_game.decision(player1, player_draw)
+    expect(draw_game.winner).to eq 'DRAW!'
   end
 
-  xit 'knows when it\'s a draw' do
+  xit 'knows who the winner of a RPS game is' do
+  end
+
+  xit 'knows who the winner of a RPSSL game is' do
   end
 end
