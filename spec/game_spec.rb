@@ -27,15 +27,15 @@ describe Game do
     expect(game.player2).to eq 'CPU'
   end
 
-  it 'chooses a random hand if there is only one player online' do
+  it 'chooses a random hand for the CPU if there is only 1 player online' do
     expect(game.cpu_hand).to satisfy { 'rock' || 'paper' || 'scissors' }
   end
 
-  it 'does not choose a hand if there is a second player in the game' do
+  it 'does not choose a random hand to play against if there are 2 players in the game' do
     expect(two_players_game.cpu_hand).to be nil
   end
 
-  it 'knows when it\'s a draw' do
+  it 'knows when the result of a game is a draw' do
     player_draw = double(:player, hand: 'rock')
     draw_game = Game.new(:player1, 'RPS', player_draw)
     draw_game.decision(player1, player_draw)
@@ -70,6 +70,11 @@ describe Game do
     end
   end
 
-  xit 'knows who the winner of a 1 player vs CPU RPSSL game is' do
+  it 'knows who the winner of a 1 player vs CPU RPSSL game is' do
+    100.times do
+      new_rpssl_game = Game.new(:player1, 'RPSSL')
+      new_rpssl_game.decision(player1)
+      expect(new_rpssl_game.winner).to satisfy { player1 || 'DRAW!' || 'CPU' }
+    end
   end
 end
