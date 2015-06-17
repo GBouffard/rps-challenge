@@ -35,6 +35,8 @@ git clone git@github.com:GBouffard/rps-challenge.git
 cd rps-challenge
 bundle install
 ```
+You can know play with classes; create players and play Rock-Paper-Scissors and Rock-Paper-Scissors-Spock-Lizard games
+
 How to run tests
 ----
 ```
@@ -42,4 +44,5 @@ cd rps-challenge
 rspec
 ```
 and this is what you should see
-![](public/link_to_come_later.png)
+
+![](public/rps_screenshot.png)
