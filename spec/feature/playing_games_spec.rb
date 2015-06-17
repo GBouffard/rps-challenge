@@ -32,6 +32,14 @@ feature 'grand finale feature test - playing 40 games: 10 of each type' do
     end
   end
 
-  xscenario 'a 2 players RPSSL game' do
+  scenario '10 2 players RPSSL games' do
+    10.times do
+      guillaume1 = Player.new('Good Guillaume')
+      guillaume2 = Player.new('Guillaume Evil Twin')
+      rpssl_game = Game.new(guillaume1, 'RPSSL', guillaume2)
+      guillaume1.choice(%w(rock paper scissors spock lizard).sample)
+      guillaume2.choice(%w(rock paper scissors spock lizard).sample)
+      expect(rpssl_game.decision(guillaume1, guillaume2)).to satisfy { guillaume1 || 'DRAW!' || guillaume2 }
+    end
   end
 end
