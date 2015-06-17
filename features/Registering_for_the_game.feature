@@ -3,7 +3,7 @@ Feature: Registering for the game
   So that I can start playing an awesome game
   I would like to register before starting the game
 
-  Scenario: On the homepage
+  Scenario: Entering my name to play
     Given I am on the homepage
     When I fill in "name" with "Guillaume"
     And I press "START"

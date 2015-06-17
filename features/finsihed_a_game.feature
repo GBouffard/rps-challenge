@@ -1,7 +1,7 @@
 Feature: Finished a game
-  As a player
-  So that I can play another game or do other things
-  I would like to be able to select different destinations after a game has finished
+  As a player that just finished a game
+  So that I can play another game or select other options
+  I would like to be able to click a choice of buttons that can lead me to my destinations
 
   Scenario: Going back to the homepage
     Given I am on the results page
@@ -12,3 +12,8 @@ Feature: Finished a game
     Given I am on the results page
     When I follow "Choose a type of game"
     Then I should be on the options page
+
+  Scenario: Play again that type of game
+    Given I am on the results page
+    When I follow "Play again!"
+    Then I should be on the gameplay page
