@@ -13,6 +13,12 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
+    when /the options page/
+      '/game_options'
+
+    when /the gameplay page/
+      '/play'    
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

@@ -11,6 +11,11 @@ class RockPaperScissors < Sinatra::Base
     erb :options
   end
 
+  get '/play' do
+    @type = params[:type]
+    erb :gameplay
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $PROGRAM_NAME
 end

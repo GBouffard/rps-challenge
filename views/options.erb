@@ -3,5 +3,15 @@
   <title>HTML Tutorial</title>
   <body>
     Hello <%= @name %>!
+    <br><br>
+     <form action="play">
+      <fieldset>
+        Which game do you want to play?<br><br>
+        <input type="radio" name="type" value="RPS">Rock Paper Scissors<br>
+        <input type="radio" name="type" value="RPSSL">Rock Paper Scissors Spock Lizard
+        <br><br>
+        <input type="submit" value="PLAY!">
+      </fieldset>
+    </form>
   </body>
 </html>
