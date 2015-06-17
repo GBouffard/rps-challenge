@@ -8,6 +8,7 @@ gem 'coveralls', require: false
 gem 'cucumber'
 gem 'cucumber-sinatra'
 gem 'rspec'
+gem 'rspec-sinatra'
 gem 'rubocop'
 gem 'rubocop-rspec'
 gem 'shotgun'
