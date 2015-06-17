@@ -42,7 +42,10 @@ How to run tests
 ```
 cd rps-challenge
 rspec
+cucumber
 ```
 and this is what you should see
 
 ![](public/rps_screenshot.png)
+
+![](public/rps_cucumber_screenshot.png)
