@@ -17,8 +17,10 @@ module NavigationHelpers
       '/game_options'
 
     when /the gameplay page/
-      '/play'    
+      '/game_play'
 
+    when /the results page/
+      '/game_results'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

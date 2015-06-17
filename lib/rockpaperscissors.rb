@@ -11,9 +11,14 @@ class RockPaperScissors < Sinatra::Base
     erb :options
   end
 
-  get '/play' do
+  get '/game_play' do
     @type = params[:type]
-    erb :gameplay
+    erb :play
+  end
+
+  get '/game_results' do
+    @hand = params[:hand]
+    erb :results
   end
 
   # start the server if ruby file executed directly
