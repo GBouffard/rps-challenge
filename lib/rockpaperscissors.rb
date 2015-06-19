@@ -21,11 +21,17 @@ class RockPaperScissors < Sinatra::Base
     @name = session[:name]
     @type = (params[:type].nil? ? session[:type] : params[:type])
     session[:type] = @type
+    @game = Game.new(session[:player], @type)
+    session[:game] = @game
     erb :play
   end
 
   get '/game_results' do
     @hand = params[:hand]
+    session[:player].hand = @hand
+    p session[:game]
+    @result = (session[:game]).decision(session[:player])
+    p @result
     erb :results
   end
 

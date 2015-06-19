@@ -1,7 +1,7 @@
 require 'game'
 
 describe Game do
-  let(:player1) { double :player, hand: 'rock' }
+  let(:player1) { double :player, name: 'Guillaume', hand: 'rock' }
   let(:player2) { double :player, hand: 'scissors' }
   let(:game) { Game.new(:player1) }
   let(:two_players_game) { Game.new(:player1, 'RPS', player2) }
@@ -39,12 +39,12 @@ describe Game do
     player_draw = double(:player, hand: 'rock')
     draw_game = Game.new(:player1, 'RPS', player_draw)
     draw_game.decision(player1, player_draw)
-    expect(draw_game.winner).to eq 'DRAW!'
+    expect(draw_game.winner).to eq 'None! It\'s a DRAW'
   end
 
   it 'knows who the winner of a 2 players RPS game is' do
     two_players_game.decision(player1, player2)
-    expect(two_players_game.winner).to eq player1
+    expect(two_players_game.winner).to eq player1.name
     player3 = double(:player, hand: 'paper')
     p3wins = Game.new(:player1, 'RPS', player3)
     p3wins.decision(player1, player3)
@@ -55,7 +55,7 @@ describe Game do
     player4 = double(:player, hand: 'lizard')
     p1wins = Game.new(:player1, 'RPS', player4)
     p1wins.decision(player1, player4)
-    expect(p1wins.winner).to eq player1
+    expect(p1wins.winner).to eq player1.name
     player5 = double(:player, hand: 'spock')
     p5wins = Game.new(:player1, 'RPS', player5)
     p5wins.decision(player1, player5)
@@ -66,7 +66,7 @@ describe Game do
     100.times do
       new_game = Game.new(:player1)
       new_game.decision(player1)
-      expect(new_game.winner).to satisfy { player1 || 'DRAW!' || 'CPU' }
+      expect(new_game.winner).to satisfy { player1.name || 'None! It\'s a DRAW' || 'CPU' }
     end
   end
 
@@ -74,7 +74,7 @@ describe Game do
     100.times do
       new_rpssl_game = Game.new(:player1, 'RPSSL')
       new_rpssl_game.decision(player1)
-      expect(new_rpssl_game.winner).to satisfy { player1 || 'DRAW!' || 'CPU' }
+      expect(new_rpssl_game.winner).to satisfy { player1.name || 'None! It\'s a DRAW' || 'CPU' }
     end
   end
 end

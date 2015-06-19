@@ -1,5 +1,6 @@
 class Game
-  attr_reader :type, :player2, :cpu_hand, :winner
+  attr_reader :type, :player2, :winner
+  attr_accessor :cpu_hand
   RPS_RULES = { 'rock' => %w(scissors lizard),
                 'scissors' => %w(paper lizard),
                 'paper' => %w(rock spock),
@@ -16,8 +17,9 @@ class Game
 
   def decision(player1, player2 = 'CPU')
     second_hand = (@player2 == 'CPU' ? @cpu_hand : @player2.hand)
-    @winner = (player1.hand == second_hand ? 'DRAW!' : player2)
-    RPS_RULES.each { |wins, loses| @winner = player1 if player1.hand == wins && loses.include?(second_hand) }
+    @winner = (player1.hand == second_hand ? 'None! It\'s a DRAW' : player2)
+    RPS_RULES.each { |wins, loses| @winner = player1.name if player1.hand == wins && loses.include?(second_hand) }
+    @winner
   end
 
   private

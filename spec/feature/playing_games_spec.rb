@@ -8,7 +8,7 @@ feature 'grand finale feature test - playing 40 games: 10 of each type' do
       guillaume = Player.new('Guillaume')
       rps_game = Game.new(guillaume)
       guillaume.choice(%w(rock paper scissors).sample)
-      expect(rps_game.decision(guillaume)).to satisfy { guillaume || 'DRAW!' || 'CPU' }
+      expect(rps_game.decision(guillaume)).to satisfy { 'Guillaume' || 'None! It\'s a DRAW' || 'CPU' }
     end
   end
 
@@ -17,7 +17,7 @@ feature 'grand finale feature test - playing 40 games: 10 of each type' do
       guillaume = Player.new('Guillaume')
       rpssl_game = Game.new(guillaume, 'RPSSL')
       guillaume.choice(%w(rock paper scissors spock lizard).sample)
-      expect(rpssl_game.decision(guillaume)).to satisfy { guillaume || 'DRAW!' || 'CPU' }
+      expect(rpssl_game.decision(guillaume)).to satisfy { 'Guillaume' || 'None! It\'s a DRAW' || 'CPU' }
     end
   end
 
@@ -28,7 +28,7 @@ feature 'grand finale feature test - playing 40 games: 10 of each type' do
       rps_game = Game.new(guillaume1, 'RPS', guillaume2)
       guillaume1.choice(%w(rock paper scissors).sample)
       guillaume2.choice(%w(rock paper scissors).sample)
-      expect(rps_game.decision(guillaume1, guillaume2)).to satisfy { guillaume1 || 'DRAW!' || guillaume2 }
+      expect(rps_game.decision(guillaume1, guillaume2)).to satisfy { 'Good Guillaume' || 'None! It\'s a DRAW' || guillaume2 }
     end
   end
 
@@ -39,7 +39,7 @@ feature 'grand finale feature test - playing 40 games: 10 of each type' do
       rpssl_game = Game.new(guillaume1, 'RPSSL', guillaume2)
       guillaume1.choice(%w(rock paper scissors spock lizard).sample)
       guillaume2.choice(%w(rock paper scissors spock lizard).sample)
-      expect(rpssl_game.decision(guillaume1, guillaume2)).to satisfy { guillaume1 || 'DRAW!' || guillaume2 }
+      expect(rpssl_game.decision(guillaume1, guillaume2)).to satisfy { 'Good Guillaume' || 'None! It\'s a DRAW' || guillaume2 }
     end
   end
 end
