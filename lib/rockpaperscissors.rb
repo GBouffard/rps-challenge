@@ -5,6 +5,7 @@ require_relative 'player'
 class RockPaperScissors < Sinatra::Base
   enable :sessions
   set :views, proc { File.join(root, '..', 'views') }
+  set :public_folder, proc { File.join(root, '..', 'public') }
   get '/' do
     erb :index
   end

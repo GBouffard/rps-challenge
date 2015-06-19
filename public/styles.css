@@ -1,0 +1,23 @@
+body {
+  background-image: url("/images/rps_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align:center;
+  font-family: 'Orbitron', serif;
+  font-size: 24px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+h1 {
+  width: 50%;
+  height: 20%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  font-family: 'Orbitron', serif;
+  font-size: 24px;
+  text-shadow: 4px 4px 4px #aaa;
+  background-color:#FFFFBB;
+  border-radius:3px;
+}
