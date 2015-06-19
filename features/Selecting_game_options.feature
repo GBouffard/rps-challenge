@@ -11,6 +11,13 @@ Feature: Selecting game options
     Then I should be on the gameplay page
       And I should see "Choose your weapon"
 
+  Scenario: the game remembers my name
+    Given I am on the homepage
+    When I fill in "name" with "Guillaume"
+      And I press "START"
+      And I press "PLAY!"
+    Then I should see "Guillaume"
+
   Scenario: Choosing a RPS type of game
     Given I am on the homepage
     When I fill in "name" with "Guillaume"
