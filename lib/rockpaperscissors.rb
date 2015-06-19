@@ -23,15 +23,15 @@ class RockPaperScissors < Sinatra::Base
     session[:type] = @type
     @game = Game.new(session[:player], @type)
     session[:game] = @game
+    session[:hand] = @game.cpu_hand
     erb :play
   end
 
   get '/game_results' do
     @hand = params[:hand]
     session[:player].hand = @hand
-    p session[:game]
+    @cpu_hand = session[:hand]
     @result = (session[:game]).decision(session[:player])
-    p @result
     erb :results
   end
 
