@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <title>HTML Tutorial</title>
+  <title>RPS by Guillaume</title>
   <body>
     <form action="game_results">
       <fieldset>
@@ -8,8 +8,10 @@
         <button type="submit" name="hand" value="rock">Rock</button>
         <button type="submit" name="hand" value="paper">Paper</button>
         <button type="submit" name="hand" value="scissors">Scissors</button>
-        <button type="submit" name="hand" value="spock">Spock</button>
-        <button type="submit" name="hand" value="lizard">Lizard</button>
+        <% if @type == "RPSSL" %>
+          <button type="submit" name="hand" value="spock">Spock</button>
+          <button type="submit" name="hand" value="lizard">Lizard</button>
+        <% end %>
       </fieldset>
     </form>
   </body>
