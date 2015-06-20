@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <title>RPS by Guillaume</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="<%= url('/styles.css') %>">
   <body>
-    ...and the winner is... <%= @result %>!<br><br>
-    you chose <%= @hand %> and CPU chose <%= @cpu_hand %> <br><br>
+    <h1>
+      ...and the winner is... <%= @result %>!<br><br>
+      you chose <%= @hand %> and CPU chose <%= @cpu_hand %> <br><br>
 
-    <button type="button"><a href='/game_play'>Play again!</a></button><br><br>
+      <button type="button"><a href='/game_play'>Play again!</a></button><br><br>
 
-    <button type="button"><a href='/game_options'>Choose a type of game</a></button>
-    <button type="button"><a href='/'>Back to the Homepage</a></button>
+      <button type="button"><a href='/game_options'>Choose a type of game</a></button>
+      <button type="button"><a href='/'>Back to the Homepage</a></button>
+    </h1>
   </body>
 </html>

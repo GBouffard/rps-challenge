@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
   <title>RPS by Guillaume</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="<%= url('/styles.css') %>">
   <body>
-    Hello <%= @name %>!
-    <br><br>
-     <form action="game_play">
-      <fieldset>
-        Which game do you want to play?<br><br>
-        <input type="radio" name="type" value="RPS" checked>Rock Paper Scissors<br>
-        <input type="radio" name="type" value="RPSSL">Rock Paper Scissors Spock Lizard
-        <br><br>
+  Hello <%= @name %>!
+    <div class="choose_game">
+      <form action="game_play">
+      <br>Which game do you want to play?<br><br>
+        <table style="width:100%">
+          <tr>
+            <td><input type="radio" name="type" value="RPS" checked>Rock Paper Scissors<br><br><img src="/images/rps_button.jpg"></td>
+            <td><input type="radio" name="type" value="RPSSL">Rock Paper Scissors Spock Lizard<br><br><img src="/images/rpssl_button.jpg"></td>   
+          </tr>
+        </table>
         <input type="submit" value="PLAY!">
-      </fieldset>
-    </form>
+      </form>
+    </div>
   </body>
 </html>

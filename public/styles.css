@@ -8,9 +8,9 @@ body {
   text-shadow: 4px 4px 4px #aaa;
 }
 
-h1 {
+.enter_name {
   width: 50%;
-  height: 20%;
+  height: 25%;
   overflow: auto;
   margin: auto;
   position: absolute;
@@ -18,6 +18,29 @@ h1 {
   font-family: 'Orbitron', serif;
   font-size: 24px;
   text-shadow: 4px 4px 4px #aaa;
-  background-color:#FFFFBB;
+  background-image: url("/images/danger.jpg");
+  border-color: black;
+  border-style: solid;
+  border-width: medium;
+  border-radius:3px;
+}
+
+.choose_game {
+  width: 620px;
+  height: 420px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  left: 100px;
+  top: 150px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  font-family: 'Orbitron', serif;
+  font-size: 16px;
+  text-shadow: 4px 4px 4px #aaa;
+  color:white;
+  background:rgba(0,0,0,0.6);
+  border-color: black;
+  border-style: solid;
+  border-width: medium;
   border-radius:3px;
 }

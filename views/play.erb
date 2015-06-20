@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
   <title>RPS by Guillaume</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="<%= url('/styles.css') %>">
   <body>
-    <form action="game_results">
-      <fieldset>
-        Choose your weapon <%= @name %>! Choose wisely...<br><br>
-        <button type="submit" name="hand" value="rock">Rock</button>
-        <button type="submit" name="hand" value="paper">Paper</button>
-        <button type="submit" name="hand" value="scissors">Scissors</button>
-        <% if @type == "RPSSL" %>
-          <button type="submit" name="hand" value="spock">Spock</button>
-          <button type="submit" name="hand" value="lizard">Lizard</button>
-        <% end %>
-      </fieldset>
-    </form>
+    <h1>
+      <form action="game_results">
+        <fieldset>
+          Choose your weapon <%= @name %>! Choose wisely...<br><br>
+          <button type="submit" name="hand" value="rock">Rock</button>
+          <button type="submit" name="hand" value="paper">Paper</button>
+          <button type="submit" name="hand" value="scissors">Scissors</button>
+          <% if @type == "RPSSL" %>
+            <button type="submit" name="hand" value="spock">Spock</button>
+            <button type="submit" name="hand" value="lizard">Lizard</button>
+          <% end %>
+        </fieldset>
+      </form>
+    </h1>
   </body>
 </html>
