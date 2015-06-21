@@ -17,7 +17,8 @@ Feature: Choosing a hand
       And I press "START"
       And I press "PLAY!"
       And I press "Rock"
-    Then I should see "you chose rock"
+    Then I should see "You chose:"
+      And I should see "rock"
 
   Scenario: Reminding me the hand that I chose on results page
     Given I am on the homepage
@@ -25,5 +26,6 @@ Feature: Choosing a hand
       And I press "START"
       And I press "PLAY!"
       And I press "Rock"
-    Then I should see "you chose rock"
+    Then I should see "You chose:"
+      And I should see "rock"
 

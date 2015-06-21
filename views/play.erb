@@ -4,19 +4,17 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Orbitron">
     <link rel="stylesheet" href="<%= url('/styles.css') %>">
   <body>
-    <h1>
+    <div class="hands_choice">
       <form action="game_results">
-        <fieldset>
-          Choose your weapon <%= @name %>! Choose wisely...<br><br>
-          <button type="submit" name="hand" value="rock">Rock</button>
-          <button type="submit" name="hand" value="paper">Paper</button>
-          <button type="submit" name="hand" value="scissors">Scissors</button>
-          <% if @type == "RPSSL" %>
-            <button type="submit" name="hand" value="spock">Spock</button>
-            <button type="submit" name="hand" value="lizard">Lizard</button>
-          <% end %>
-        </fieldset>
+        <BR>Choose your weapon <%= @name %>! Choose wisely...<br><br>
+        <button type="submit" name="hand" value="rock">Rock</button>
+        <button type="submit" name="hand" value="paper">Paper</button>
+        <button type="submit" name="hand" value="scissors">Scissors</button>
+        <% if @type == "RPSSL" %>
+          <button type="submit" name="hand" value="spock">Spock</button>
+          <button type="submit" name="hand" value="lizard">Lizard</button>
+        <% end %>
       </form>
-    </h1>
+    </div>
   </body>
 </html>

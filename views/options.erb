@@ -4,7 +4,9 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Orbitron">
     <link rel="stylesheet" href="<%= url('/styles.css') %>">
   <body>
-  Hello <%= @name %>!
+    <div class="greeting">
+      Hello <%= @name %>!
+    </div>
     <div class="choose_game">
       <form action="game_play">
       <br>Which game do you want to play?<br><br>

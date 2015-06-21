@@ -25,6 +25,15 @@ body {
   border-radius:3px;
 }
 
+.greeting {
+  position: absolute;
+  text-align:center;
+  top: 0; left: 0; bottom: 0; right: 0;
+  font-family: 'Orbitron', serif;
+  font-size: 36px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
 .choose_game {
   width: 620px;
   height: 420px;
@@ -43,4 +52,56 @@ body {
   border-style: solid;
   border-width: medium;
   border-radius:3px;
+}
+
+.hands_choice {
+  width: 800px;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  font-family: 'Orbitron', serif;
+  font-size: 24px;
+  text-shadow: 4px 4px 4px #aaa;
+  background-image: url("/images/plate.jpg");
+}
+
+.the_winner {
+  position: absolute;
+  text-align:center;
+  top: 0; left: 0; bottom: 0; right: 0;
+  font-family: 'Orbitron', serif;
+  font-size: 36px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+.both_choices {
+  width: 450px;
+  height: 250px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  text-align:center;
+  top: 0; left: 0; bottom: 0; right: 0;
+  font-family: 'Orbitron', serif;
+  font-size: 16px;
+  text-shadow: 4px 4px 4px #aaa;
+  color:white;
+  background:rgba(0,0,0,0.6);
+  border-color: black;
+  border-style: solid;
+  border-width: medium;
+  border-radius:3px;
+}
+
+.playagain {
+  position: fixed;
+  top: 78%;
+  right: 47%;
+}
+
+.two_buttons {
+  position: fixed;
+  top: 88%;
+  right: 39%;
 }

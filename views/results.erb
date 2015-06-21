@@ -4,14 +4,33 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Orbitron">
     <link rel="stylesheet" href="<%= url('/styles.css') %>">
   <body>
-    <h1>
-      ...and the winner is... <%= @result %>!<br><br>
-      you chose <%= @hand %> and CPU chose <%= @cpu_hand %> <br><br>
-
+    <div class="the_winner">
+      ...and the winner is... <%= @result %>!
+    </div>
+    <br><br>
+    <div class="both_choices">
+      <table>
+        <tr>
+          <td>You chose:<br><br><%= @hand %></td>
+          <td align="center">The CPU chose:<br><br><%= @cpu_hand %></td>
+        </tr>
+      </table>
+    </div>
+    <br><br>
+    <div class="playagain">
       <button type="button"><a href='/game_play'>Play again!</a></button><br><br>
-
-      <button type="button"><a href='/game_options'>Choose a type of game</a></button>
-      <button type="button"><a href='/'>Back to the Homepage</a></button>
-    </h1>
+    </div>
+    <div class="two_buttons">
+      <table>
+        <tr>
+          <td>
+            <button type="button"><a href='/game_options'>Choose a type of game</a></button>
+          </td>
+          <td>
+            <button type="button"><a href='/'>Back to the Homepage</a></button>
+          </td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
