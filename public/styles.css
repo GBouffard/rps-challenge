@@ -22,7 +22,7 @@ body {
   border-color: black;
   border-style: solid;
   border-width: medium;
-  border-radius:3px;
+  border-radius:5px;
 }
 
 .greeting {
@@ -37,12 +37,9 @@ body {
 .choose_game {
   width: 620px;
   height: 420px;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  left: 100px;
-  top: 150px;
-  top: 0; left: 0; bottom: 0; right: 0;
+  position: fixed;
+  top: 22%;
+  right: 25%;
   font-family: 'Orbitron', serif;
   font-size: 16px;
   text-shadow: 4px 4px 4px #aaa;
@@ -51,7 +48,38 @@ body {
   border-color: black;
   border-style: solid;
   border-width: medium;
-  border-radius:3px;
+  border-radius:5px;
+}
+
+.regular-checkbox {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  padding: 6px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.regular-checkbox:active, .regular-checkbox:checked:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked {
+  background-color: #e9ecee;
+  border: 1px solid #adb8c0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  color: #99a1a7;
+}
+
+.regular-checkbox:checked:after {
+  content: '\2714';
+  font-size: 13px;
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  color: #C40000;
 }
 
 .hands_choice {
@@ -67,9 +95,9 @@ body {
 }
 
 .the_winner {
-  position: absolute;
-  text-align:center;
-  top: 0; left: 0; bottom: 0; right: 0;
+  position: fixed;
+  top: 20%;
+  right: 30%;
   font-family: 'Orbitron', serif;
   font-size: 36px;
   text-shadow: 4px 4px 4px #aaa;
@@ -78,7 +106,6 @@ body {
 .both_choices {
   width: 450px;
   height: 250px;
-  overflow: auto;
   margin: auto;
   position: absolute;
   text-align:center;
@@ -91,7 +118,7 @@ body {
   border-color: black;
   border-style: solid;
   border-width: medium;
-  border-radius:3px;
+  border-radius:5px;
 }
 
 .playagain {
