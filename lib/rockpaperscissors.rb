@@ -33,6 +33,9 @@ class RockPaperScissors < Sinatra::Base
     session[:player].hand = @hand
     @cpu_hand = session[:hand]
     @result = (session[:game]).decision(session[:player])
+    @name = session[:name]
+    @win_or_lose = (@result == @name) ? 'win_' : 'lose_'
+    @cpu_win_or_lose = (@result == 'CPU') ? 'win_' : 'lose_'
     erb :results
   end
 

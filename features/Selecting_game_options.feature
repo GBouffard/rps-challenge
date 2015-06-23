@@ -24,5 +24,5 @@ Feature: Selecting game options
       And I press "START"
       And I check "Rock Paper Scissors" within "type"
       And I press "PLAY!"
-    Then I should see "Rock"
-      But I should not see "Spock"
+    Then I should see the image "hand_rock.jpg"
+      But I should not see the image "hand_spock.jpg"

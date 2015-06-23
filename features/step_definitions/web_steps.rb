@@ -30,6 +30,10 @@ When /^(?:|I )press "([^\"]*)"(?: within "([^\"]*)")?$/ do |button, selector|
   end
 end
 
+When /^I follow the image link "([^\"]*)"$/ do |img_alt|
+    find(:xpath, "/html/body/div/form/button[1]").click()
+end
+
 When /^(?:|I )follow "([^\"]*)"(?: within "([^\"]*)")?$/ do |link, selector|
   with_scope(selector) do
     click_link(link)
@@ -112,6 +116,18 @@ Then /^(?:|I )should see "([^\"]*)"(?: within "([^\"]*)")?$/ do |text, selector|
       assert page.has_content?(text)
     end
   end
+end
+
+Then /^I should see the image "(.+)"$/ do |imagename|
+    page.should have_css("img[src$='#{imagename}']")
+end
+
+Then /^I should see one of the rock images$/ do
+    page.has_css?("img[src$='lose_rock.jpg']") ? true : page.has_css?("img[src$='win_rock.jpg']")
+end
+
+Then /^I should not see the image "(.+)"$/ do |imagename|
+    page.should have_no_css("img[src$='#{imagename}']")
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/(?: within "([^\"]*)")?$/ do |regexp, selector|

@@ -18,6 +18,7 @@ body {
   font-family: 'Orbitron', serif;
   font-size: 24px;
   text-shadow: 4px 4px 4px #aaa;
+  color:white;
   background-image: url("/images/danger.jpg");
   border-color: black;
   border-style: solid;
@@ -83,15 +84,20 @@ body {
 }
 
 .hands_choice {
-  width: 800px;
-  height: 300px;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  width: 1000px;
+  height: 280px;
+  position: fixed;
+  top: 30%;
+  right: 10%;
   font-family: 'Orbitron', serif;
-  font-size: 24px;
+  font-size: 16px;
   text-shadow: 4px 4px 4px #aaa;
-  background-image: url("/images/plate.jpg");
+  color:white;
+  background:rgba(0,0,0,0.6);
+  border-color: black;
+  border-style: solid;
+  border-width: medium;
+  border-radius:5px;
 }
 
 .the_winner {

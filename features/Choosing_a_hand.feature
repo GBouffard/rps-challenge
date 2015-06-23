@@ -8,7 +8,7 @@ Feature: Choosing a hand
     When I fill in "name" with "Guillaume"
       And I press "START"
       And I press "PLAY!"
-      And I press "Scissors"
+      And I follow the image link "Rock"
     Then I should be on the results page
 
   Scenario: Reminding me the hand that I chose on results page
@@ -16,16 +16,6 @@ Feature: Choosing a hand
     When I fill in "name" with "Guillaume"
       And I press "START"
       And I press "PLAY!"
-      And I press "Rock"
+      And I follow the image link "Rock"
     Then I should see "You chose:"
-      And I should see "rock"
-
-  Scenario: Reminding me the hand that I chose on results page
-    Given I am on the homepage
-    When I fill in "name" with "Guillaume"
-      And I press "START"
-      And I press "PLAY!"
-      And I press "Rock"
-    Then I should see "You chose:"
-      And I should see "rock"
-
+      And I should see one of the rock images

@@ -8,7 +8,7 @@ Feature: After playing a game
       When I fill in "name" with "Guillaume"
       And I press "START"
       And I press "PLAY!"
-      And I press "Rock"
+      And I follow the image link "Rock"
       And I follow "Back to the Homepage"
     Then I should be on the homepage
 
@@ -17,7 +17,7 @@ Feature: After playing a game
       When I fill in "name" with "Guillaume"
       And I press "START"
       And I press "PLAY!"
-      And I press "Paper"
+      And I follow the image link "Rock"
       And I follow "Choose a type of game"
     Then I should be on the options page
 
@@ -26,6 +26,6 @@ Feature: After playing a game
       When I fill in "name" with "Guillaume"
       And I press "START"
       And I press "PLAY!"
-      And I press "Scissors"
+      And I follow the image link "Rock"
       And I follow "Play again!"
     Then I should be on the gameplay page

@@ -7,12 +7,12 @@
     <div class="hands_choice">
       <form action="game_results">
         <BR>Choose your weapon <%= @name %>! Choose wisely...<br><br>
-        <button type="submit" name="hand" value="rock">Rock</button>
-        <button type="submit" name="hand" value="paper">Paper</button>
-        <button type="submit" name="hand" value="scissors">Scissors</button>
+        <button type="submit" name="hand" value="rock"><img src="/images/hand_rock.jpg" alt="Rock"></button>
+        <button type="submit" name="hand" value="paper"><img src="/images/hand_paper.jpg"></button>
+        <button type="submit" name="hand" value="scissors"><img src="/images/hand_scissors.jpg"></button>
         <% if @type == "RPSSL" %>
-          <button type="submit" name="hand" value="spock">Spock</button>
-          <button type="submit" name="hand" value="lizard">Lizard</button>
+          <button type="submit" name="hand" value="spock"><img src="/images/hand_spock.jpg"></button>
+          <button type="submit" name="hand" value="lizard"><img src="/images/hand_lizard.jpg"></button>
         <% end %>
       </form>
     </div>

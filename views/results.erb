@@ -11,8 +11,8 @@
     <div class="both_choices">
       <table width="440">
         <tr>
-          <td width="50%"><br>You chose:<br><br><%= @hand %></td>
-          <td width="50%"><br>The CPU chose:<br><br><%= @cpu_hand %></td>
+          <td width="50%"><br>You chose:<br><br><img src="/images/<%= @win_or_lose %><%= @hand %>.jpg"></td>
+          <td width="50%"><br>The CPU chose:<br><br><img src="/images/<%= @cpu_win_or_lose %><%= @cpu_hand %>.jpg"></td>
         </tr>
       </table>
     </div>
