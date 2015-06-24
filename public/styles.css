@@ -37,7 +37,7 @@ body {
 
 .choose_game {
   width: 620px;
-  height: 420px;
+  height: 445px;
   position: fixed;
   top: 22%;
   right: 25%;
@@ -51,6 +51,30 @@ body {
   border-width: medium;
   border-radius:5px;
 }
+
+.play_button {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d6a40f), color-stop(1, #a35a00));
+  background:-moz-linear-gradient(top, #d6a40f 5%, #a35a00 100%);
+  background:-webkit-linear-gradient(top, #d6a40f 5%, #a35a00 100%);
+  background:-o-linear-gradient(top, #d6a40f 5%, #a35a00 100%);
+  background:-ms-linear-gradient(top, #d6a40f 5%, #a35a00 100%);
+  background:linear-gradient(to bottom, #d6a40f 5%, #a35a00 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6a40f', endColorstr='#a35a00',GradientType=0);
+  background-color:#d6a40f;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #ad6110;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:13px;
+  padding:8px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+}
+
 
 .regular-checkbox {
   -webkit-appearance: none;
@@ -129,12 +153,66 @@ body {
 
 .playagain {
   position: fixed;
-  top: 78%;
-  right: 47%;
-}
+  top: 75%;
+  right: 43%;
+  background: #F56200;
+  background: -moz-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#F56200),color-stop(100%,#FEBB49));
+  background: -webkit-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: -o-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: -ms-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#F56200',endColorstr='#FEBB49',GradientType=0);
+  padding:12px 27px;
+  color:#623F1D;
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:24px;
+  border-radius:48px;
+  -moz-border-radius:48px;
+  -webkit-border-radius:48px;
+  border:1px solid #623F1D
+}         
 
-.two_buttons {
+.button_one {
   position: fixed;
   top: 88%;
-  right: 39%;
+  right: 53%;
+  background: #F56200;
+  background: -moz-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#F56200),color-stop(100%,#FEBB49));
+  background: -webkit-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: -o-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: -ms-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#F56200',endColorstr='#FEBB49',GradientType=0);
+  padding:8px 18px;
+  color:#623F1D;
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:16px;
+  border-radius:48px;
+  -moz-border-radius:48px;
+  -webkit-border-radius:48px;
+  border:1px solid #623F1D
+}
+
+.button_two {
+  position: fixed;
+  top: 88%;
+  right: 31%;
+  background: #F56200;
+  background: -moz-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#F56200),color-stop(100%,#FEBB49));
+  background: -webkit-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: -o-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: -ms-linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  background: linear-gradient(top,#F56200 0%,#FEBB49 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#F56200',endColorstr='#FEBB49',GradientType=0);
+  padding:8px 18px;
+  color:#623F1D;
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:16px;
+  border-radius:48px;
+  -moz-border-radius:48px;
+  -webkit-border-radius:48px;
+  border:1px solid #623F1D
 }
