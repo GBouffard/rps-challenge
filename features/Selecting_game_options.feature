@@ -6,23 +6,32 @@ Feature: Selecting game options
   Scenario: Choosing any type of game
     Given I am on the homepage
     When I fill in "name" with "Guillaume"
-      And I press "START"
-      And I press "PLAY!"
+    And I press "START"
+    And I press "PLAY!"
     Then I should be on the gameplay page
-      And I should see "Choose your weapon"
+    And I should see "Choose your weapon"
 
   Scenario: the game remembers my name
     Given I am on the homepage
     When I fill in "name" with "Guillaume"
-      And I press "START"
-      And I press "PLAY!"
+    And I press "START"
+    And I press "PLAY!"
     Then I should see "Guillaume"
 
   Scenario: Choosing a RPS type of game
     Given I am on the homepage
     When I fill in "name" with "Guillaume"
-      And I press "START"
-      And I check "Rock Paper Scissors" within "type"
-      And I press "PLAY!"
+    And I press "START"
+    And I choose "RPS"
+    And I press "PLAY!"
     Then I should see the image "hand_rock.jpg"
-      But I should not see the image "hand_spock.jpg"
+    But I should not see the image "hand_spock.jpg"
+
+  Scenario: Choosing a RPSSL type of game
+    Given I am on the homepage
+    When I fill in "name" with "Guillaume"
+    And I press "START"
+    And I choose "RPSSL"
+    And I press "PLAY!"
+    Then I should see the image "hand_rock.jpg"
+    And I should see the image "hand_spock.jpg"

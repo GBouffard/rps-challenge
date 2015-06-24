@@ -6,16 +6,16 @@ Feature: Choosing a hand
   Scenario: Going to the results page when I made my choice
     Given I am on the homepage
     When I fill in "name" with "Guillaume"
-      And I press "START"
-      And I press "PLAY!"
-      And I follow the image link "Rock"
+    And I press "START"
+    And I press "PLAY!"
+    And I follow the image link "Rock"
     Then I should be on the results page
 
   Scenario: Reminding me the hand that I chose on results page
     Given I am on the homepage
     When I fill in "name" with "Guillaume"
-      And I press "START"
-      And I press "PLAY!"
-      And I follow the image link "Rock"
+    And I press "START"
+    And I press "PLAY!"
+    And I follow the image link "Rock"
     Then I should see "You chose:"
-      And I should see one of the rock images
+    And I should see one of the rock images

@@ -27,6 +27,7 @@ Technologies used
 - erb files
 - Git
 - Heroku
+- StackOverflow for questions
 
 How to run it
 ----

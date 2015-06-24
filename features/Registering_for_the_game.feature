@@ -6,6 +6,6 @@ Feature: Registering for the game
   Scenario: Entering my name to play
     Given I am on the homepage
     When I fill in "name" with "Guillaume"
-      And I press "START"
+    And I press "START"
     Then I should be on the options page
-      And I should see "Hello Guillaume!"
+    And I should see "Hello Guillaume!"
