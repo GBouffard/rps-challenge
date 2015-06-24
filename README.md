@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/GBouffard/rps-challenge.svg)](https://travis-ci.org/GBouffard/rps-challenge)
+
 :fist: Rock, Paper, Scissors :v:
 ===
 This is a week end challenge from Makers Academy. The goal was to re-create the Rock, Paper, Scissors game, and also create a web interface to play the game. A bonus to the game was to make it a Rock, Paper, Scissors, Lizard, Spock game.
