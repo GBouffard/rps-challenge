@@ -1,4 +1,5 @@
 require 'capybara/rspec'
+require 'spec_helper'
 require 'player'
 require 'game'
 
