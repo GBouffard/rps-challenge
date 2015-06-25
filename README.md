@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/GBouffard/rps-challenge.svg)](https://travis-ci.org/GBouffard/rps-challenge)
+[![Build Status](https://travis-ci.org/GBouffard/rps-challenge.svg)](https://travis-ci.org/GBouffard/rps-challenge) [![Coverage Status](https://coveralls.io/repos/GBouffard/rps-challenge/badge.svg?branch=master)](https://coveralls.io/r/GBouffard/rps-challenge?branch=master)
 
 :fist: Rock, Paper, Scissors :v:
 ===
