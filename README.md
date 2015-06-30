@@ -15,9 +15,9 @@ Heroku
 ----
 [Guillaume's Rock Paper Scissors](https://guillaume-rps.herokuapp.com/game_play)
 
-![](public/rps_game1)
+![](public/images/rps_game1.png)
 
-![](public/rps_game2)
+![](public/images/rps_game2.png)
 
 Objectives of exercise
 ----
@@ -52,7 +52,7 @@ cucumber
 ```
 and this is what you should see with rspec:
 
-![](public/rps_screenshot.png)
+![](public/images/rps_screenshot.png)
 
 All the cukes are also green.
 The trace is too long to do a print screen in one go :)
