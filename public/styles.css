@@ -28,6 +28,7 @@ body {
 
 .greeting {
   position: absolute;
+  line-height: 150%;
   text-align:center;
   top: 0; left: 0; bottom: 0; right: 0;
   font-family: 'Orbitron', serif;
@@ -39,8 +40,10 @@ body {
   width: 620px;
   height: 445px;
   position: fixed;
-  top: 22%;
-  right: 25%;
+  top: 50%;
+  left: 50%;
+  margin-top: -170px;
+  margin-left: -310px;
   font-family: 'Orbitron', serif;
   font-size: 16px;
   text-shadow: 4px 4px 4px #aaa;
@@ -108,11 +111,13 @@ body {
 }
 
 .hands_choice {
-  width: 1000px;
   height: 280px;
+  width: 1000px;
   position: fixed;
-  top: 30%;
-  right: 10%;
+  top: 50%;
+  left: 50%;
+  margin-top: -140px;
+  margin-left: -500px;
   font-family: 'Orbitron', serif;
   font-size: 16px;
   text-shadow: 4px 4px 4px #aaa;
@@ -125,9 +130,8 @@ body {
 }
 
 .the_winner {
-  position: fixed;
-  top: 20%;
-  right: 30%;
+  line-height: 800%;
+  text-align: center;
   font-family: 'Orbitron', serif;
   font-size: 36px;
   text-shadow: 4px 4px 4px #aaa;
