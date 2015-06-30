@@ -11,11 +11,13 @@ These were the requested functionalities:
 - the game will choose a random option
 - a winner will be declared
 
-![](public/screenshot_to_come)
-
 Heroku
 ----
-[Link coming soon]()
+[Guillaume's Rock Paper Scissors](https://guillaume-rps.herokuapp.com/game_play)
+
+![](public/rps_game1)
+
+![](public/rps_game2)
 
 Objectives of exercise
 ----
@@ -37,8 +39,9 @@ How to run it
 git clone git@github.com:GBouffard/rps-challenge.git
 cd rps-challenge
 bundle install
+rackup
 ```
-You can know play with classes; create players and play Rock-Paper-Scissors and Rock-Paper-Scissors-Spock-Lizard games
+If you go on http://localhost:9292/, you can know play with classes; create players and play Rock-Paper-Scissors and Rock-Paper-Scissors-Spock-Lizard games
 
 How to run tests
 ----
@@ -47,8 +50,9 @@ cd rps-challenge
 rspec
 cucumber
 ```
-and this is what you should see
+and this is what you should see with rspec:
 
 ![](public/rps_screenshot.png)
 
-![](public/rps_cucumber_screenshot.png)
+All the cukes are also green.
+The trace is too long to do a print screen in one go :)
