@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/GBouffard/rps-challenge.svg)](https://travis-ci.org/GBouffard/rps-challenge) [![Coverage Status](https://coveralls.io/repos/GBouffard/rps-challenge/badge.svg?branch=master)](https://coveralls.io/r/GBouffard/rps-challenge?branch=master)
+[![Build Status](https://travis-ci.org/GBouffard/rps-challenge.svg)](https://travis-ci.org/GBouffard/rps-challenge) [![Coverage Status](https://coveralls.io/repos/GBouffard/rps-challenge/badge.svg?branch=master)](https://coveralls.io/r/GBouffard/rps-challenge?branch=master) [![Code Climate](https://codeclimate.com/repos/55a3d721e30ba02b0e000ad5/badges/f040d48b2c22183e6fae/gpa.svg)](https://codeclimate.com/repos/55a3d721e30ba02b0e000ad5/feed)
 
 :fist: Rock, Paper, Scissors :v:
 ===
