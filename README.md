@@ -13,7 +13,7 @@ These were the requested functionalities:
 
 Heroku
 ----
-[Guillaume's Rock Paper Scissors](https://guillaume-rps.herokuapp.com)
+[Guillaume's Rock Paper Scissors](http://guillaume-rps.herokuapp.com)
 
 ![](public/images/rps_game1.png)
 
